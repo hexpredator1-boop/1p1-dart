@@ -1,7 +1,3 @@
-## Flutter wrapper
--keep class io.flutter.app.** { *; }
--keep class io.flutter.plugin.** { *; }
--keep class io.flutter.util.** { *; }
--keep class io.flutter.view.** { *; }
--keep class io.flutter.** { *; }
--keep class io.flutter.plugins.** { *; }
+# Keep Google Play Core classes to prevent R8 shrinking errors
+# These classes are referenced by Flutter but not used in this simple app
+-keep class com.google.android.play.core.** { *; }
